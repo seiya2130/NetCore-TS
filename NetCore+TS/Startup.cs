@@ -26,15 +26,8 @@ namespace NetCore_TS
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
         }
     }
 }
